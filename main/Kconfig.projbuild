@@ -1,0 +1,30 @@
+menu "ESP32 Wake-on-LAN Configuration"
+
+    config WOL_WIFI_SSID
+        string "WiFi SSID"
+        default "YOUR_WIFI"
+        help
+            SSID of the WiFi network the ESP32 should join.
+
+    config WOL_WIFI_PASSWORD
+        string "WiFi password"
+        default "YOUR_PASSWORD"
+        help
+            Password for the configured WiFi network.
+
+    config WOL_BROADCAST_IP
+        string "Wake-on-LAN broadcast IP"
+        default "192.168.0.255"
+        help
+            Broadcast address for the local network.
+            Example: use 192.168.0.255 for a 192.168.0.x/24 network.
+
+    config WOL_TARGET_MAC
+        string "Target computer MAC address"
+        default "24:4B:FE:8D:81:3D"
+        help
+            MAC address of the computer to wake.
+            Use colon-separated hexadecimal bytes, for example:
+            24:4B:FE:8D:81:3D
+
+endmenu
